@@ -25,10 +25,10 @@ public class FarmTest {
     @Test
     public void testConstructor(){
         // Given
-        ArrayList<ChickenCoops> chickenCoops = new ArrayList<ChickenCoops>();
-        ArrayList<Stables> stables = new ArrayList<Stables>();
+        ChickenCoops chickenCoops = new ChickenCoops();
+        Stables stables = new Stables();
         FarmHouse farmHouse = new FarmHouse();
-        Farm farm = new Farm(stables,chickenCoops,farmHouse);
+        Farm farm = new Farm(stables, chickenCoops, farmHouse);
 
         // When
         // Then
@@ -37,4 +37,42 @@ public class FarmTest {
         Assert.assertEquals(farmHouse,farm.getFarmhouse());
     }
 
+    @Test
+    public void testSetChickenCoops(){
+        // Given
+        ChickenCoops chickenCoops = new ChickenCoops();
+        Farm farm = new Farm();
+
+        // When
+        farm.setChickenCoops(chickenCoops);
+
+        // Then
+        Assert.assertEquals(chickenCoops,farm.getChickenCoops());
+    }
+
+    @Test
+    public void testSetStables(){
+        // Given
+        Stables stables = new Stables();
+        Farm farm = new Farm();
+
+        // When
+        farm.setStables(stables);
+
+        // Then
+        Assert.assertEquals(stables,farm.getStables());
+    }
+
+    @Test
+    public void testSetFarmHouse(){
+        // Given
+        FarmHouse farmHouse = new FarmHouse();
+        Farm farm = new Farm();
+
+        // When
+        farm.setFarmhouse(farmHouse);
+
+        // Then
+        Assert.assertEquals(farmHouse,farm.getFarmhouse());
+    }
 }

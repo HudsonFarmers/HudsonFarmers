@@ -9,33 +9,40 @@ public class Farm {
 
     // Nullary Constructor
     public Farm(){
-
+        chickenCoops = new ChickenCoops();
+        stables = new Stables();
+        farmhouse = new FarmHouse();
     }
 
     // Constructor
-    public Farm(ArrayList<Stables> stables, ArrayList<ChickenCoops> chickenCoops, FarmHouse farmhouse){
+    public Farm(Stables stables, ChickenCoops chickenCoops, FarmHouse farmhouse){
+        this.stables = stables;
+        this.chickenCoops = chickenCoops;
+        this.farmhouse = farmhouse;
 
     }
 
-    public ArrayList<Stables> getStables() {
-        return null;
+    public ChickenCoops getChickenCoops() {
+        return chickenCoops;
     }
 
-    public void setStables(ArrayList<Stables> stables) {
-
+    public void setChickenCoops(ChickenCoops chickenCoops) {
+        this.chickenCoops = chickenCoops;
     }
 
-    public ArrayList<ChickenCoops> getChickenCoops() {
-        return null;
+    public Stables getStables() {
+        return stables;
     }
 
-    public void setChickenCoops(ArrayList<ChickenCoops> chickenCoops) {
+    public void setStables(Stables stables) {
+        this.stables = stables;
     }
 
     public FarmHouse getFarmhouse() {
-        return null;
+        return farmhouse;
     }
 
     public void setFarmhouse(FarmHouse farmhouse) {
+        this.farmhouse = farmhouse;
     }
 }
