@@ -1,16 +1,13 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.farm.Stable;
-import org.junit.Assert;
+import com.zipcodewilmington.froilansfarm.farm.Stables;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 public class StableTest {
     @Test
     public void testInheritanceOfArrayList(){
         // Given
-        Stable cc = new Stable();
+        Stables cc = new Stables();
 
         //Assert.assertTrue(cc instanceof ArrayList<Horse>);
     }

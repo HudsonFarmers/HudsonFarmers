@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
-public class FarmHouse
+public class Stables //extends ArrayList<Horse> {
 {
 }
