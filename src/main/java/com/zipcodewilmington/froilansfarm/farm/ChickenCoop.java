@@ -2,5 +2,6 @@ package com.zipcodewilmington.froilansfarm.farm;
 
 import java.sql.Array;
 
-public class ChickenCoop extends ArrayList<Chicken> {
+public class ChickenCoop //extends ArrayList<Chicken>
+{
 }
