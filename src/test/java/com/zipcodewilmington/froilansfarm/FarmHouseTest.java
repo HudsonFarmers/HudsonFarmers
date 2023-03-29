@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.farm.FarmHouse;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,6 +14,4 @@ public class FarmHouseTest {
 
         Assert.assertTrue(cc instanceof ArrayList<Chicken>);
     }
-
-
 }
