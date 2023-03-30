@@ -25,4 +25,16 @@ public void makesNoiseTest(){
     String expected = "bak bak";
     Assert.assertEquals(expected, chicken.makesNoise());
 }
+@Test
+    public void testYield(){
+        chicken.isFertilized=false;
+        Egg actual= chicken.harvestYield();
+        Assert.assertTrue(actual instanceof Egg);
+    }
+    @Test
+    public void testFailYield(){
+        chicken.isFertilized=true;
+        Egg actual= chicken.harvestYield();
+        Assert.assertFalse(actual instanceof Egg);
+    }
 }
