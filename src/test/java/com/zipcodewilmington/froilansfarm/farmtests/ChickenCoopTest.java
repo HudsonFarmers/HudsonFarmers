@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.farmtests;
 
 import com.zipcodewilmington.froilansfarm.farm.ChickenCoops;
 import org.junit.Test;
