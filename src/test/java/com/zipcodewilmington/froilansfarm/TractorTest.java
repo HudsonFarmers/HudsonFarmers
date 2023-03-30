@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Animal.Pilot;
+import com.zipcodewilmington.froilansfarm.Vehicle.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -24,6 +26,12 @@ public class TractorTest {
         Tractor tractor = new Tractor();
 
         Assert.assertTrue(tractor instanceof Rideable);
+    }
+    @Test
+    public void testInheritanceFarmVehicle() {
+        Tractor tractor = new Tractor();
+
+        Assert.assertTrue(tractor instanceof FarmVehicle);
     }
 
     @Test
@@ -52,6 +60,6 @@ public class TractorTest {
 
         tractor.operate(cropRow);
         String expected = "Chugga Chugga";
-        Assert.assertTrue(canBeHarvested == true && expected == tractor.makeNoise());
+        Assert.assertTrue((crowRow.canBeHarvested() == true) && (expected == tractor.makeNoise()));
     }
 }
