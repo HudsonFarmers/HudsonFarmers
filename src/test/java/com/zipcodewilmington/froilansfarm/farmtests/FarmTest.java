@@ -7,11 +7,13 @@ import com.zipcodewilmington.froilansfarm.farm.Stable;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class FarmTest {
     @Test
     public void testNullaryConstructor(){
         // Given
-        Farm farm = new Farm();
+        Farm farm = Farm.getInstance();
 
         // When
         // Then
@@ -23,49 +25,49 @@ public class FarmTest {
     @Test
     public void testConstructor(){
         // Given
-        ChickenCoop chickenCoop = new ChickenCoop();
-        Stable stable = new Stable();
+        ArrayList<ChickenCoop> chickenCoops = new ArrayList<>();
+        ArrayList<Stable> stables = new ArrayList<>();
         FarmHouse farmHouse = new FarmHouse();
-        Farm farm = new Farm(stable, chickenCoop, farmHouse);
+        Farm farm = Farm.getInstance(stables, chickenCoops, farmHouse);
 
         // When
         // Then
-        Assert.assertEquals(chickenCoop,farm.getChickenCoops());
-        Assert.assertEquals(stable,farm.getStables());
+        Assert.assertEquals(chickenCoops,farm.getChickenCoops());
+        Assert.assertEquals(stables,farm.getStables());
         Assert.assertEquals(farmHouse,farm.getFarmhouse());
     }
 
     @Test
     public void testSetChickenCoops(){
         // Given
-        ChickenCoop chickenCoop = new ChickenCoop();
-        Farm farm = new Farm();
+        ArrayList<ChickenCoop> chickenCoops = new ArrayList<>();
+        Farm farm = Farm.getInstance();
 
         // When
-        farm.setChickenCoops(chickenCoop);
+        farm.setChickenCoops(chickenCoops);
 
         // Then
-        Assert.assertEquals(chickenCoop,farm.getChickenCoops());
+        Assert.assertEquals(chickenCoops,farm.getChickenCoops());
     }
 
     @Test
     public void testSetStables(){
         // Given
-        Stable stable = new Stable();
-        Farm farm = new Farm();
+        ArrayList<Stable> stables = new ArrayList<>();
+        Farm farm = Farm.getInstance();
 
         // When
-        farm.setStables(stable);
+        farm.setStables(stables);
 
         // Then
-        Assert.assertEquals(stable,farm.getStables());
+        Assert.assertEquals(stables,farm.getStables());
     }
 
     @Test
     public void testSetFarmHouse(){
         // Given
         FarmHouse farmHouse = new FarmHouse();
-        Farm farm = new Farm();
+        Farm farm = Farm.getInstance();
 
         // When
         farm.setFarmhouse(farmHouse);
