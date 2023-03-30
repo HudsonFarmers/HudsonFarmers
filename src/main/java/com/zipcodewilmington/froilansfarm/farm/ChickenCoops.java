@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
-public class ChickenCoops //extends ArrayList<Chicken>
+import java.util.ArrayList;
+
+public class ChickenCoops extends ArrayList<String>
 {
 }
