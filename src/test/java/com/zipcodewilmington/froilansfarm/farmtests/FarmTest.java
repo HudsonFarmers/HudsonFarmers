@@ -1,13 +1,11 @@
 package com.zipcodewilmington.froilansfarm.farmtests;
 
-import com.zipcodewilmington.froilansfarm.farm.ChickenCoops;
+import com.zipcodewilmington.froilansfarm.farm.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.FarmHouse;
-import com.zipcodewilmington.froilansfarm.farm.Stables;
+import com.zipcodewilmington.froilansfarm.farm.Stable;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 public class FarmTest {
     @Test
@@ -25,42 +23,42 @@ public class FarmTest {
     @Test
     public void testConstructor(){
         // Given
-        ChickenCoops chickenCoops = new ChickenCoops();
-        Stables stables = new Stables();
+        ChickenCoop chickenCoop = new ChickenCoop();
+        Stable stable = new Stable();
         FarmHouse farmHouse = new FarmHouse();
-        Farm farm = new Farm(stables, chickenCoops, farmHouse);
+        Farm farm = new Farm(stable, chickenCoop, farmHouse);
 
         // When
         // Then
-        Assert.assertEquals(chickenCoops,farm.getChickenCoops());
-        Assert.assertEquals(stables,farm.getStables());
+        Assert.assertEquals(chickenCoop,farm.getChickenCoops());
+        Assert.assertEquals(stable,farm.getStables());
         Assert.assertEquals(farmHouse,farm.getFarmhouse());
     }
 
     @Test
     public void testSetChickenCoops(){
         // Given
-        ChickenCoops chickenCoops = new ChickenCoops();
+        ChickenCoop chickenCoop = new ChickenCoop();
         Farm farm = new Farm();
 
         // When
-        farm.setChickenCoops(chickenCoops);
+        farm.setChickenCoops(chickenCoop);
 
         // Then
-        Assert.assertEquals(chickenCoops,farm.getChickenCoops());
+        Assert.assertEquals(chickenCoop,farm.getChickenCoops());
     }
 
     @Test
     public void testSetStables(){
         // Given
-        Stables stables = new Stables();
+        Stable stable = new Stable();
         Farm farm = new Farm();
 
         // When
-        farm.setStables(stables);
+        farm.setStables(stable);
 
         // Then
-        Assert.assertEquals(stables,farm.getStables());
+        Assert.assertEquals(stable,farm.getStables());
     }
 
     @Test
