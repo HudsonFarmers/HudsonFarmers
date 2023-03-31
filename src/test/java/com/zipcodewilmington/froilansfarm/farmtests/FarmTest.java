@@ -1,9 +1,9 @@
 package com.zipcodewilmington.froilansfarm.farmtests;
 
-import com.zipcodewilmington.froilansfarm.farm.ChickenCoops;
+import com.zipcodewilmington.froilansfarm.farm.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.FarmHouse;
-import com.zipcodewilmington.froilansfarm.farm.Stables;
+import com.zipcodewilmington.froilansfarm.farm.Stable;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,7 +13,7 @@ public class FarmTest {
     @Test
     public void testNullaryConstructor(){
         // Given
-        Farm farm = new Farm();
+        Farm farm = Farm.getInstance();
 
         // When
         // Then
@@ -25,10 +25,10 @@ public class FarmTest {
     @Test
     public void testConstructor(){
         // Given
-        ChickenCoops chickenCoops = new ChickenCoops();
-        Stables stables = new Stables();
+        ArrayList<ChickenCoop> chickenCoops = new ArrayList<>();
+        ArrayList<Stable> stables = new ArrayList<>();
         FarmHouse farmHouse = new FarmHouse();
-        Farm farm = new Farm(stables, chickenCoops, farmHouse);
+        Farm farm = Farm.getInstance(stables, chickenCoops, farmHouse);
 
         // When
         // Then
@@ -40,8 +40,8 @@ public class FarmTest {
     @Test
     public void testSetChickenCoops(){
         // Given
-        ChickenCoops chickenCoops = new ChickenCoops();
-        Farm farm = new Farm();
+        ArrayList<ChickenCoop> chickenCoops = new ArrayList<>();
+        Farm farm = Farm.getInstance();
 
         // When
         farm.setChickenCoops(chickenCoops);
@@ -53,8 +53,8 @@ public class FarmTest {
     @Test
     public void testSetStables(){
         // Given
-        Stables stables = new Stables();
-        Farm farm = new Farm();
+        ArrayList<Stable> stables = new ArrayList<>();
+        Farm farm = Farm.getInstance();
 
         // When
         farm.setStables(stables);
@@ -67,7 +67,7 @@ public class FarmTest {
     public void testSetFarmHouse(){
         // Given
         FarmHouse farmHouse = new FarmHouse();
-        Farm farm = new Farm();
+        Farm farm = Farm.getInstance();
 
         // When
         farm.setFarmhouse(farmHouse);

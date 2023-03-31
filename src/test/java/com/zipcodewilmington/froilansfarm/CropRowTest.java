@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -31,9 +31,9 @@ public class CropRowTest {
     }
 
     @Test
-    public void shouldReturnFalseHasBeenHarvested(){
+   public void shouldReturnFalseHasBeenHarvested(){
         CropRow cropRow = new CropRow();
-        boolean hasBeenHarvested = cropRow.hasBeenHarvested();
+       boolean hasBeenHarvested = cropRow.hasBeenHarvested();
         assertFalse(hasBeenHarvested);
     }
     @Test
@@ -48,7 +48,7 @@ public class CropRowTest {
     @Test
     public void testAddCropToCropRow() {
         CropRow cropRow = new CropRow();
-        Crop tomato = new Tomato();
+       Crop tomato = new Tomato();
         cropRow.add(tomato);
         assertEquals(tomato, cropRow.get(0));
     }

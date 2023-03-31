@@ -1,6 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.VehicleTest.CropDuster;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -8,14 +12,14 @@ import static org.junit.Assert.assertTrue;
 
 public class TomatoPlantTest {
 
-    @Test
+   @Test
     public  void shouldReturnTrueHasBeenFertilized(){
         // Tractor is a FarmVehicle which can harvest a Crop
         // CropDuster is a FarmVehicle and Aircraft which can fertilize a CropRow
-        Crop tp = new TomatoPlant();
+       Crop tp = new TomatoPlant();
         CropRow cr = new CropRow();
         cr.add(tp);
-        CropDuster cd = new CropDuster();
+       CropDuster cd = new CropDuster();
         cd.fertilize(cr);
         boolean hasBeenFertilized = tp.hasBeenFertilized();
         assertTrue(hasBeenFertilized);
@@ -23,7 +27,7 @@ public class TomatoPlantTest {
 
     @Test
     public void shouldReturnFalseHasBeenFertilized(){
-        TomatoPlant tp = new TomatoPlant();
+       TomatoPlant tp = new TomatoPlant();
         boolean hasBeenFertilized = tp.hasBeenFertilized();
         assertFalse(hasBeenFertilized);
     }

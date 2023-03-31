@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.Field;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -12,27 +12,26 @@ public class FieldTest {
    public void shouldReturnTrueHasBeenHarvested(){
         Field field = new Field();
         boolean hasBeenHarvested = field.hasBeenHarvested();
-        assertTrue(hasBeenHarvested);
+      assertTrue(hasBeenHarvested);
     }
 
     @Test
-   public void shouldReturnFalseHasBeenHarvested(){
-        Field field = new Field();
-        boolean hasBeenHarvested = field.hasBeenHarvested;
+   public void shouldReturnFalseHasBeenHarvested(){ Field field = new Field();
+       boolean hasBeenHarvested = field.hasBeenHarvested;
         assertFalse(hasBeenHarvested);
-    }
+            }
 
 
-    @Test
+   @Test
     public void shouldReturnTrueHasBeenFertilized(){
         Field field = new Field();
-        boolean hasBeenFertilized = field.hasBeenFertilized();
+       boolean hasBeenFertilized = field.hasBeenFertilized();
         assertTrue(hasBeenFertilized);
     }
 
     @Test
     public void shouldReturnFalseHasBeenFertilized(){
-        Field field = new Field();
+      Field field = new Field();
         boolean hasBeenFertilized = field.hasBeenFertilized();
         assertFalse(hasBeenFertilized);
     }

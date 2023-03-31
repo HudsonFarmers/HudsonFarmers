@@ -7,6 +7,8 @@ import com.zipcodewilmington.froilansfarm.edible.Tomato;
 import com.zipcodewilmington.froilansfarm.farm.Crop;
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Animal.persons.Pilot;
+import com.zipcodewilmington.froilansfarm.Vehicle.*;
 import org.junit.Assert;
 import org.junit.Test;
 

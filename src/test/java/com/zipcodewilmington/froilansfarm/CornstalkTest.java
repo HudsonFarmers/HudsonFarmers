@@ -1,5 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.edible.Corn;
 import com.zipcodewilmington.froilansfarm.VehicleTest.CropDuster;
 import org.junit.Test;
 
@@ -22,7 +27,7 @@ public class CornstalkTest {
     @Test
    public void shouldReturnFalseHasBeenFertilized(){
         CornStalk cornstalk = new CornStalk();
-        boolean hasBeenFertilized = cornstalk.hasBeenFertilized();
+       boolean hasBeenFertilized = cornstalk.hasBeenFertilized();
         assertFalse(hasBeenFertilized);
     }
 
@@ -47,7 +52,7 @@ public class CornstalkTest {
     public void testYieldsCorn() {
         // CornStalk is a Crop which can yield a EarCorn
         Crop corn = new CornStalk();
-        result = corn.yield();
+        Corn result = corn.yield();
         assert result instanceof Corn();
     }
 

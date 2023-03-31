@@ -3,38 +3,49 @@ package com.zipcodewilmington.froilansfarm.farm;
 import java.util.ArrayList;
 
 public class Farm {
-    private ChickenCoops chickenCoops;
-    private Stables stables;
+    public static final Farm FARM = new Farm();
+    private ArrayList<ChickenCoop> chickenCoops;
+    private ArrayList<Stable> stables;
     private FarmHouse farmhouse;
+
+    // Get instance of Farm
+    public static Farm getInstance(){
+        return FARM;
+    }
+
+    public static Farm getInstance(ArrayList<Stable> stables, ArrayList<ChickenCoop> chickenCoops, FarmHouse farmhouse){
+        FARM.setStables(stables);
+        FARM.setFarmhouse(farmhouse);
+        FARM.setChickenCoops(chickenCoops);
+        return FARM;
+    }
 
     // Nullary Constructor
     public Farm(){
-        chickenCoops = new ChickenCoops();
-        stables = new Stables();
-        farmhouse = new FarmHouse();
+         this(new ArrayList<Stable>(), new ArrayList<ChickenCoop>(), new FarmHouse());
     }
 
     // Constructor
-    public Farm(Stables stables, ChickenCoops chickenCoops, FarmHouse farmhouse){
+    public Farm(ArrayList<Stable> stables, ArrayList<ChickenCoop> chickenCoops, FarmHouse farmhouse){
         this.stables = stables;
         this.chickenCoops = chickenCoops;
         this.farmhouse = farmhouse;
 
     }
 
-    public ChickenCoops getChickenCoops() {
+    public ArrayList<ChickenCoop> getChickenCoops() {
         return chickenCoops;
     }
 
-    public void setChickenCoops(ChickenCoops chickenCoops) {
+    public void setChickenCoops(ArrayList<ChickenCoop> chickenCoops) {
         this.chickenCoops = chickenCoops;
     }
 
-    public Stables getStables() {
+    public ArrayList<Stable> getStables() {
         return stables;
     }
 
-    public void setStables(Stables stables) {
+    public void setStables(ArrayList<Stable> stables) {
         this.stables = stables;
     }
 
