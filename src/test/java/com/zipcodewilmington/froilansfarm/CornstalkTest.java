@@ -5,7 +5,6 @@ import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.edible.Corn;
-import com.zipcodewilmington.froilansfarm.VehicleTest.CropDuster;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

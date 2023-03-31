@@ -1,6 +1,9 @@
-package com.zipcodewilmington.froilansfarm.VehicleTest;
+package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.Field;
 
 public class CropDuster implements Vehicle, AirCraft {
     boolean isMounted;
@@ -22,11 +25,10 @@ public class CropDuster implements Vehicle, AirCraft {
         return "BlupBlup";
     }
 
-    public void fly(CropRow cropRow) {
-        for (int i = 0; i < cropRow.size(); i++) {
-            if (!cropRow.get(i).isFertilized()) {
-
+    public void fly(Field field) {
+        for (CropRow cropRow: field)
+            for (Crop crop : cropRow) {
+                crop.setFertilized(true);
             }
-        }
     }
 }

@@ -1,9 +1,13 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-import com.zipcodewilmington.froilansfarm.VehicleTest.FarmVehicle;
-import com.zipcodewilmington.froilansfarm.VehicleTest.Tractor;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
+import com.zipcodewilmington.froilansfarm.edible.Edible;
+import com.zipcodewilmington.froilansfarm.farm.Animal.Horse;
+import com.zipcodewilmington.froilansfarm.farm.Animal.Person;
 
-public class Farmer implements Rider<Tractor> {
+public class Farmer extends Person implements Rider<Tractor, Horse>, Botanist {
 
     @Override
     public boolean mount(Tractor tractor) {
@@ -23,5 +27,21 @@ public class Farmer implements Rider<Tractor> {
         }
 
         return false;
+    }
+
+    @Override
+    public CropRow plant(Crop crop, CropRow cropRow) {
+        cropRow.add(crop);
+        return cropRow;
+    }
+
+    @Override
+    public String makeNoise() {
+        return "Ah";
+    }
+
+    @Override
+    public void eat(Edible edible) {
+
     }
 }

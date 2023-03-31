@@ -1,9 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-import com.zipcodewilmington.froilansfarm.VehicleTest.AirCraft;
-import com.zipcodewilmington.froilansfarm.VehicleTest.CropDuster;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.edible.Edible;
+import com.zipcodewilmington.froilansfarm.farm.Animal.Person;
 
-public class Pilot implements Rider<CropDuster>{
+public class Pilot extends Person implements AirLicenceRider{
 
     @Override
     public boolean mount(CropDuster cropDuster) {
@@ -23,5 +24,15 @@ public class Pilot implements Rider<CropDuster>{
         }
 
         return false;
+    }
+
+    @Override
+    public String makeNoise() {
+        return "null";
+    }
+
+    @Override
+    public void eat(Edible edible) {
+
     }
 }

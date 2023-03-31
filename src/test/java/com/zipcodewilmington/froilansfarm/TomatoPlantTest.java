@@ -1,10 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.VehicleTest.CropDuster;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
