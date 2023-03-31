@@ -1,6 +1,11 @@
 package com.zipcodewilmington.froilansfarm.farm.Animal;
 
-import com.zipcodewilmington.froilansfarm.edible.Egg;
+public class Chicken implements Animal {
 
-public class Chicken extends Animal implements Produce <Egg> {
+
+    @Override
+    public String makeNoise() {
+        return null;
+    }
+
 }

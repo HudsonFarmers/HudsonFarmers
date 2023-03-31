@@ -1,40 +1,58 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.edible.Corn;
+import com.zipcodewilmington.froilansfarm.edible.Egg;
+import com.zipcodewilmington.froilansfarm.edible.Produce;
+import com.zipcodewilmington.froilansfarm.farm.Animal.Chicken;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ChickenTest {
-    Animal.Chicken chicken= new Animal.Chicken();
-    Tomato tomato= new Tomato();
-    EatCorn corn = new EatCorn();
-    Egg egg = new Egg();
+
 
 
 @Test
     public void testInheritance(){
-        Assert.assertTre(chicken instanceof produce);
+        Chicken chicken= new Chicken();
+        Assert.assertTrue(chicken instanceof Produce);
     }
 @Test
     public void testInheritance() {
-        Assert.assertTrue(chicken instanceof Animal);
+    Chicken chicken= new Chicken();
+    Assert.assertEquals(true, chicken instanceof Animal);
     }
 
 
 @Test
 public void makesNoiseTest(){
+    Chicken chicken= new Chicken();
     String expected = "bak bak";
-    Assert.assertEquals(expected, chicken.makesNoise());
+    Assert.assertEquals(expected, chicken.makeNoise());
 }
-@Test
+    @Test
     public void testYield(){
-        chicken.isFertilized=false;
-        Egg actual= chicken.harvestYield();
-        Assert.assertTrue(actual instanceof Egg);
+        Chicken chicken= new Chicken();
+        Egg actual= chicken.yield();
+        Assert.assertNotNull(actual);
     }
     @Test
     public void testFailYield(){
-        chicken.isFertilized=true;
-        Egg actual= chicken.harvestYield();
-        Assert.assertFalse(actual instanceof Egg);
+        Chicken chicken= new Chicken();
+        Egg actual= chicken.yield();
+        actual.setIsFertilized(true);
+        Assert.assertNull(actual);
     }
+    @Test
+    public void testEat() {
+        Chicken chicken = new Chicken();
+        Corn corn = new Corn ();
+        chicken.eat(corn);
+
+        Boolean expected = true;
+        Boolean actual = chicken.hasEaten(corn);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+
 }

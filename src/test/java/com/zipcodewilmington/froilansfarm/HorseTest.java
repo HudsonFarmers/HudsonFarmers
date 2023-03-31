@@ -35,8 +35,10 @@ public class HorseTest {
     @Test
     public void testRidingStatusDismounted(){
         Farmer farmer = new Farmer();
+        Horse horse= new Horse();
+        farmer.mount(horse);
         farmer.dismount(horse);
-        boolean actual = farmer.riderStatus();
+        boolean actual = horse.getIsMounted();
         Assert.assertFalse(actual);
     }
 
