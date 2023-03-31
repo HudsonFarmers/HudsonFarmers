@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.VehicleTest;
 
+import com.zipcodewilmington.froilansfarm.edible.Edible;
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
+
+import java.util.ArrayList;
 
 public class Tractor implements Vehicle, FarmVehicle {
     boolean isMounted;
@@ -25,7 +28,7 @@ public class Tractor implements Vehicle, FarmVehicle {
         System.out.println("Need rider to operate!");
         return false;
     }
-    public ArrayList<T extends Edible> harvest(CropRow cropRow){
+    public ArrayList<Edible> harvest(CropRow cropRow){
         //check what passed in operate
         //for (int i = 0; i < croprow.length; i++){
         //      if (croprow[i].hasbeenfertilized == true)
@@ -36,5 +39,6 @@ public class Tractor implements Vehicle, FarmVehicle {
         //                  Tomato tomato = new Tomato();
         //                  instance.put(tomato, getCount + 1);
         // }
+        return null;
     }
 }
