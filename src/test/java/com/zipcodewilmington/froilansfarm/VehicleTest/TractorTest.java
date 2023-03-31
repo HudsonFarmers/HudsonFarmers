@@ -1,7 +1,12 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.VehicleTest;
 
+import com.zipcodewilmington.froilansfarm.Animal.Farmer;
 import com.zipcodewilmington.froilansfarm.Animal.Pilot;
-import com.zipcodewilmington.froilansfarm.Vehicle.*;
+import com.zipcodewilmington.froilansfarm.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.edible.Tomato;
+import com.zipcodewilmington.froilansfarm.farm.Crop;
+import com.zipcodewilmington.froilansfarm.farm.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.TomatoPlant;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,9 +14,8 @@ public class TractorTest {
     @Test
     public void testTractorConstructor() {
         Tractor tractor = new Tractor();
-        Vehicle Tractor = new Tractor();
 
-        Assert.assertTrue(tractor instanceof Tractor && Tractor instanceof Vehicle);
+        Assert.assertTrue(tractor instanceof Tractor && tractor instanceof Vehicle);
     }
 
     @Test
@@ -36,16 +40,20 @@ public class TractorTest {
 
     @Test
     public void testTractorHarvest() {
+        Farmer farmer = new Farmer();
         Tractor tractor = new Tractor();
         Pilot pilot = new Pilot();
         CropDuster cropDuster = new CropDuster();
+        CropRow cropRow = new CropRow();
+        TomatoPlant tomatoPlant = new TomatoPlant();
 
-        cropRow.add(tomato);
+        cropRow.add(tomatoPlant);
         pilot.mount(cropDuster);
         cropDuster.fly(cropRow);
-        tractor.harvest(cropRow);
+        farmer.mount(tractor);
+        tractor.operate(cropRow);
 
-        Assert.assertTrue(instance.contains(tomato));
+        Assert.assertTrue(foodStorage.contains(tomatoPlant));
     }
 
     @Test
