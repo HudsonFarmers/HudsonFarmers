@@ -24,7 +24,7 @@ public class HorseTest {
 
         Assert.assertEquals(actual,expected);
     }
-
+// Farmer needs to have the <Horse> or <Horse>
     @Test
     public void testRidingStatusMounted(){
         Farmer farmer = new Farmer();

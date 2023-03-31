@@ -14,3 +14,6 @@ public interface Animal extends Eater, NoiseMaker {
     };
     public abstract String makeNoise();
 }
+
+// since it is an interface => no need for fields
+// override

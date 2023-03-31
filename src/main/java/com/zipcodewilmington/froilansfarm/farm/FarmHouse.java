@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
-public class FarmHouse // extends ArrayList<Person>
-{
+import com.zipcodewilmington.froilansfarm.farm.Animal.Person;
+
+import java.util.ArrayList;
+
+public class FarmHouse extends ArrayList<Person> {
 }
