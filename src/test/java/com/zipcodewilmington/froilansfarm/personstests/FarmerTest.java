@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.personstests;
 
-import com.zipcodewilmington.froilansfarm.Animal.persons.Farmer;
 import org.junit.Test;
 
 public class FarmerTest {

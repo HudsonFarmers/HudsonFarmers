@@ -1,8 +1,5 @@
 package com.zipcodewilmington.froilansfarm.personstests;
 
-import com.zipcodewilmington.froilansfarm.Animal.persons.AirLicenseRider;
-import com.zipcodewilmington.froilansfarm.Animal.persons.Farmer;
-import com.zipcodewilmington.froilansfarm.Animal.persons.Pilot;
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 import org.junit.Assert;
 import org.junit.Test;

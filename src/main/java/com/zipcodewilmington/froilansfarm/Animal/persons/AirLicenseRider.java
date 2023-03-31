@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal.persons;
 
-public interface AirLicenseRider //implements Rider<AirCraft>
-{
-    //boolean fly(Field field);
+import com.zipcodewilmington.froilansfarm.Vehicle.AirCraft;
+
+public interface AirLicenseRider<AirCraft> extends Rider {
 }

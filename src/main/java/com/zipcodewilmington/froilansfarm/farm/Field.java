@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
-import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 
-public class Field extends ArrayList<CropRow<Crop>> {
+import java.util.ArrayList;
+
+public class Field extends ArrayList<CropRow> {
 }

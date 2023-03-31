@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm.farm;
 import java.util.ArrayList;
 
 public class Farm {
-    public static final Farm FARM = new Farm();
+    private static final Farm FARM = new Farm(); // Singleton variable of FARM
     private ArrayList<ChickenCoop> chickenCoops;
     private ArrayList<Stable> stables;
     private FarmHouse farmhouse;
@@ -21,12 +21,12 @@ public class Farm {
     }
 
     // Nullary Constructor
-    public Farm(){
-         this(new ArrayList<Stable>(), new ArrayList<ChickenCoop>(), new FarmHouse());
+    private Farm(){
+         this(new ArrayList<>(), new ArrayList<>(), new FarmHouse());
     }
 
     // Constructor
-    public Farm(ArrayList<Stable> stables, ArrayList<ChickenCoop> chickenCoops, FarmHouse farmhouse){
+    private Farm(ArrayList<Stable> stables, ArrayList<ChickenCoop> chickenCoops, FarmHouse farmhouse){
         this.stables = stables;
         this.chickenCoops = chickenCoops;
         this.farmhouse = farmhouse;
