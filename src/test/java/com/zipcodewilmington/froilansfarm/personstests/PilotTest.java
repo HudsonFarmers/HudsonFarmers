@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.personstests;
 
-import com.zipcodewilmington.froilansfarm.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Animal.animals.NoiseMaker;
 import org.junit.Assert;
 import org.junit.Test;
 

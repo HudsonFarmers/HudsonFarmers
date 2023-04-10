@@ -3,8 +3,8 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.edible.Corn;
 import com.zipcodewilmington.froilansfarm.edible.Egg;
 import com.zipcodewilmington.froilansfarm.edible.Produce;
-import com.zipcodewilmington.froilansfarm.farm.Animal.Animal;
-import com.zipcodewilmington.froilansfarm.farm.Animal.Chicken;
+import com.zipcodewilmington.froilansfarm.Animal.animals.Animal;
+import com.zipcodewilmington.froilansfarm.Animal.animals.Chicken;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,8 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Animal.persons.Rider;
 import com.zipcodewilmington.froilansfarm.farm.Field;
 
-public class Tractor<Farmer> implements FarmVehicle {
+public class Tractor<T extends Rider> implements FarmVehicle<T>, FarmRides<T> {
     private boolean isMounted;
 
     public Tractor() {

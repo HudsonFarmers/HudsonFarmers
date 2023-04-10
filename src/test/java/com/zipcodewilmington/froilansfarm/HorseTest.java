@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Animal.persons.Farmer;
 import com.zipcodewilmington.froilansfarm.Vehicle.Rideable;
-import com.zipcodewilmington.froilansfarm.farm.Animal.Horse;
+import com.zipcodewilmington.froilansfarm.Animal.animals.Horse;
 import org.junit.Assert;
 import org.junit.Test;
 

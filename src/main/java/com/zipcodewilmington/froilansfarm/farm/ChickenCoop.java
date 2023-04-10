@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
-import com.zipcodewilmington.froilansfarm.farm.Animal.Chicken;
+import com.zipcodewilmington.froilansfarm.Animal.animals.Chicken;
 
 import java.util.ArrayList;
 

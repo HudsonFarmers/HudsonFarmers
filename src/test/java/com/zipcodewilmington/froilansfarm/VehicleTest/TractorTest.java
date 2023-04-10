@@ -1,13 +1,7 @@
 package com.zipcodewilmington.froilansfarm.VehicleTest;
 
 import com.zipcodewilmington.froilansfarm.Animal.Farmer;
-import com.zipcodewilmington.froilansfarm.Animal.Pilot;
-import com.zipcodewilmington.froilansfarm.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.edible.Tomato;
-import com.zipcodewilmington.froilansfarm.farm.Crop;
-import com.zipcodewilmington.froilansfarm.farm.CropRow;
-import com.zipcodewilmington.froilansfarm.farm.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.Animal.persons.Pilot;
+import com.zipcodewilmington.froilansfarm.Animal.animals.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Vehicle.*;
 import org.junit.Assert;
 import org.junit.Test;
