@@ -25,11 +25,19 @@ public class Farmer<T extends FarmRides> extends Person implements Botanist, Rid
 
     @Override
     public boolean mount(Rideable rideable) {
+        if(!rideable.isMounted()){
+            rideable.setMounted(true);
+            return true;
+        }
         return false;
     }
 
     @Override
-    public boolean unMount(Rideable rideable) {
+    public boolean disMount(Rideable rideable) {
+        if(rideable.isMounted()){
+            rideable.setMounted(false);
+            return true;
+        }
         return false;
     }
 }

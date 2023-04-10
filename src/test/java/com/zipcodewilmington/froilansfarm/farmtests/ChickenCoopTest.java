@@ -11,9 +11,9 @@ public class ChickenCoopTest {
 
     @Test
     public void testInheritanceOfArrayList(){
-        // Given
+        // Give
         ChickenCoop cc = new ChickenCoop();
 
-        Assert.assertTrue(cc instanceof ArrayList<Chicken>);
+        Assert.assertTrue(cc instanceof ArrayList);
     }
 }

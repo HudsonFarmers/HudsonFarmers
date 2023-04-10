@@ -6,9 +6,12 @@ import com.zipcodewilmington.froilansfarm.Vehicle.Rideable;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 
 public class Horse<Corn extends Edible,T extends Rider> implements FarmRides<T>, Animal<Corn> {
+    private boolean isMounted;
+
     public Horse (){
-        super();
+        isMounted = false;
     }
+
     @Override
     public String makeNoise(){
         return "NEIGH!";
@@ -18,4 +21,15 @@ public class Horse<Corn extends Edible,T extends Rider> implements FarmRides<T>,
     public void eat(Corn food) {
 
     }
+
+    @Override
+    public boolean isMounted() {
+        return isMounted;
+    }
+
+    @Override
+    public void setMounted(boolean mounted) {
+        this.isMounted = mounted;
+    }
+
 }

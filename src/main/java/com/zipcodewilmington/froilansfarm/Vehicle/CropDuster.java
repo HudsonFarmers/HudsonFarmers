@@ -1,9 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Animal.persons.AirLicenseRider;
+import com.zipcodewilmington.froilansfarm.Animal.persons.Rider;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.Field;
 
-public class CropDuster<Pilot> implements AirCraft, FarmVehicle {
+public class CropDuster<T extends AirLicenseRider> implements AirCraft<T>, FarmVehicle {
     private boolean isMounted;
 
     public CropDuster() {
@@ -23,6 +25,8 @@ public class CropDuster<Pilot> implements AirCraft, FarmVehicle {
         return false;
     }
 
+
+    // when a crop
     @Override
     public boolean operate(Field field) {
         return false;
@@ -30,5 +34,10 @@ public class CropDuster<Pilot> implements AirCraft, FarmVehicle {
 
     public void fertilize(CropRow cropRow){
 
+    }
+
+    @Override
+    public String makeNoise() {
+        return "whatever sounds a crop-duster makes";
     }
 }

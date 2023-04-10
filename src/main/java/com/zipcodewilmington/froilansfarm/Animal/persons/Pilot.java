@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.Vehicle.Rideable;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 
-public class Pilot<T extends AirCraft> extends Person implements Rider<T> {
+public class Pilot<T extends AirCraft> extends Person implements AirLicenseRider<T> {
     @Override
     public String makeNoise() {
         return "idk, im pilot?";
@@ -43,7 +43,7 @@ public class Pilot<T extends AirCraft> extends Person implements Rider<T> {
     }
 
     @Override
-    public boolean unMount(Rideable rideable) {
+    public boolean disMount(Rideable rideable) {
         return false;
     }
 }

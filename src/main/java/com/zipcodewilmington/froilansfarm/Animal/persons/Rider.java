@@ -5,5 +5,5 @@ import com.zipcodewilmington.froilansfarm.Vehicle.Rideable;
 
 public interface Rider<T extends Rideable> {
     boolean mount(Rideable rideable);
-    boolean unMount(Rideable rideable);
+    boolean disMount(Rideable rideable);
 }
