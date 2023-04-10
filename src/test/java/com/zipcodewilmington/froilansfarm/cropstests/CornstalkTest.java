@@ -22,8 +22,8 @@ public class CornstalkTest {
         cr.add(cornstalk);
         CropDuster cd = new CropDuster();
         cd.fertilize(cr);
-        boolean hasBeenFertilized = cornstalk.hasBeenFertilized();
-        assertTrue(hasBeenFertilized);
+        boolean hasBeenFertilized = cornstalk.isFertilized();
+        Assert.assertTrue(hasBeenFertilized);
     }
 
     @Test
