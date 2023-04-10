@@ -34,18 +34,18 @@ public class Tractor implements Vehicle, FarmVehicle {
         return false;
     }
     public ArrayList<Edible> harvest(CropRow cropRow){
-        //check what passed in operate
-        for (int i = 0; i < cropRow.size(); i++){
-              if (cropRow.get(i).hasbeenfertilized == true) {
+//        //check what passed in operate
+//        for (int i = 0; i < cropRow.size(); i++){
+//              if (cropRow.get(i).hasbeenfertilized == true) {
+//
+//              }
+//                  cropRow[i].setHarvested == true;
+//                  cropRow[i].yield();
+//                  cropRow.remove[i]
+////                      yield(){}
+////                          Tomato tomato = new Tomato();
+////                          instance.put(tomato, getCount + 1);
 
-              }
-                  cropRow[i].setHarvested == true;
-                  cropRow[i].yield();
-                  cropRow.remove[i]
-//                      yield(){}
-//                          Tomato tomato = new Tomato();
-//                          instance.put(tomato, getCount + 1);
-        }
         return null;
     }
 }

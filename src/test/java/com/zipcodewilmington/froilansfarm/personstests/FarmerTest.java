@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.personstests;
 
+import com.zipcodewilmington.froilansfarm.farm.Animal.Horse;
 import org.junit.Test;
 
 public class FarmerTest {
@@ -11,6 +12,7 @@ implements botanist, Rider<Tractor>
     @Test
     public void testInstanceOfPerson(){
         Farmer farmer = new Farmer();
+
         //Assert.assertTrue(farmer instanceof Person);
     }
 

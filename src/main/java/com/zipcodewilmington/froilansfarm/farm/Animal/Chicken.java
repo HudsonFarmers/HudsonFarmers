@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.edible.Egg;
 import com.zipcodewilmington.froilansfarm.edible.Produce;
 
 public class Chicken<T extends Edible, E extends Edible> implements Animal<T>, Produce<E> {
-// T is Corn, E is egg // chicken eats corn and produce egg
+// T is Corn, E is egg // chicken eats corn and produces egg
 
     @Override
     public String makeNoise() {
