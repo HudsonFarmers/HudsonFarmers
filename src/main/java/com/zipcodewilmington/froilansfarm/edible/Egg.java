@@ -18,6 +18,9 @@ public class Egg extends Edible{
     }
 
     public boolean isEdible() {
-        return isEdible;
+        if(isFertilized()){
+            return false;
+        }
+        return true;
     }
 }

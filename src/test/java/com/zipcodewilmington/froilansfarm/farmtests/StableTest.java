@@ -1,7 +1,10 @@
 package com.zipcodewilmington.froilansfarm.farmtests;
 
 import com.zipcodewilmington.froilansfarm.farm.Stable;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 public class StableTest {
     @Test
@@ -9,6 +12,6 @@ public class StableTest {
         // Given
         Stable cc = new Stable();
 
-        //Assert.assertTrue(cc instanceof ArrayList<Horse>);
+        Assert.assertTrue(cc instanceof ArrayList);
     }
 }

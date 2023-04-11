@@ -4,6 +4,7 @@ import com.zipcodewilmington.froilansfarm.Animal.persons.Rider;
 import com.zipcodewilmington.froilansfarm.Vehicle.FarmRides;
 import com.zipcodewilmington.froilansfarm.Vehicle.Rideable;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
+import com.zipcodewilmington.froilansfarm.farm.Storage;
 
 public class Horse<Corn extends Edible,T extends Rider> implements FarmRides<T>, Animal<Corn> {
     private boolean isMounted;
@@ -18,8 +19,12 @@ public class Horse<Corn extends Edible,T extends Rider> implements FarmRides<T>,
     }
 
     @Override
-    public void eat(Corn food) {
-
+    public boolean eat(Corn food) {
+        if(Storage.getCornStorage().size()>0){
+            Storage.getCornStorage().remove(0);
+            return true;
+        }
+        return false;
     }
 
     @Override

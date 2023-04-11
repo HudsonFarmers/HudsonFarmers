@@ -20,11 +20,9 @@ public class CropDuster<T extends AirLicenseRider> implements AirCraft<T>, FarmV
         isMounted = mounted;
     }
 
-    @Override
-    public boolean fly(Field field) {
-        if(isMounted){
-            operate(field);
-            return true;
+    private boolean fly(Field field) {
+        for(CropRow cr : field){
+            fertilize(cr);
         }
         return false;
     }
@@ -34,18 +32,17 @@ public class CropDuster<T extends AirLicenseRider> implements AirCraft<T>, FarmV
     @Override
     public boolean operate(Field field) {
         // go thru the crop rows in field and fertilize all crops
-        for(CropRow cr : field){
-            fertilize(cr);
+        if(isMounted){
+            fly(field);
+            return true;
         }
         return false;
     }
 
-    public void fertilize(CropRow cropRow){
+    private void fertilize(CropRow cropRow){
         // go thru all crops in cropRow and fertilize them
         for(Crop c : cropRow){
-            if(!c.isFertilized()){
                 c.setFertilized(true);
-            }
         }
     }
 
