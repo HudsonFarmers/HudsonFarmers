@@ -1,6 +1,12 @@
-package com.zipcodewilmington.froilansfarm.personstests;
+package com.zipcodewilmington.froilansfarm.animalstests;
 
-import com.zipcodewilmington.froilansfarm.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Animal.animals.Animal;
+import com.zipcodewilmington.froilansfarm.Animal.animals.Eater;
+import com.zipcodewilmington.froilansfarm.Animal.animals.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Animal.persons.AirLicenseRider;
+import com.zipcodewilmington.froilansfarm.Animal.persons.Person;
+import com.zipcodewilmington.froilansfarm.Animal.persons.Pilot;
+import com.zipcodewilmington.froilansfarm.Animal.persons.Rider;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +14,7 @@ public class PilotTest {
     @Test
     public void testInstanceOfPerson(){
         Pilot pilot = new Pilot();
-        //Assert.assertTrue(pilot instanceof Person);
+        Assert.assertTrue(pilot instanceof Person);
     }
 
     @Test
@@ -20,7 +26,7 @@ public class PilotTest {
     @Test
     public void testInstanceOfAnimal(){
         Pilot pilot = new Pilot();
-        //Assert.assertTrue(pilot instanceof Animal);
+        Assert.assertTrue(pilot instanceof Animal);
     }
 
     @Test
@@ -32,12 +38,12 @@ public class PilotTest {
     @Test
     public void testInstanceOfEater(){
         Pilot pilot = new Pilot();
-        //Assert.assertTrue(pilot instanceof Eater);
+        Assert.assertTrue(pilot instanceof Eater);
     }
 
     @Test
     public void testInstanceOfRider(){
         Pilot pilot = new Pilot();
-        //Assert.assertTrue(pilot instanceof Rider<Tractor>);
+        Assert.assertTrue(pilot instanceof Rider);
     }
 }

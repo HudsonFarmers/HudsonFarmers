@@ -6,9 +6,35 @@ import com.zipcodewilmington.froilansfarm.edible.Produce;
 
 public abstract class Crop<T extends Edible> implements Produce<T> {
 
-    public boolean hasBeenFertilized() {
-        return false;
+    boolean isFertilized;
+
+    boolean isHarvested;
+
+    public Crop(){
+        isFertilized = false;
+        isHarvested = false;
     }
+
+
+    public boolean isFertilized() {
+        return isFertilized;
+    }
+
+    public void setFertilized(boolean fertilized) {
+        isFertilized = fertilized;
+    }
+
+    public boolean isHarvested() {
+        return isHarvested;
+    }
+
+    public void setHarvested(boolean harvested) {
+        isHarvested = harvested;
+    }
+
+//    public boolean hasBeenFertilized() {
+//        return false;
+//    }
 
     public abstract T yield();
 }

@@ -1,6 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
-
-import com.zipcodewilmington.froilansfarm.VehicleTest.CropDuster;
+package com.zipcodewilmington.froilansfarm.cropstests;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;

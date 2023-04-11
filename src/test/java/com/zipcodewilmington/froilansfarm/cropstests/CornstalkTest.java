@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.cropstests;
 
 import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
@@ -22,8 +22,8 @@ public class CornstalkTest {
         cr.add(cornstalk);
         CropDuster cd = new CropDuster();
         cd.fertilize(cr);
-        boolean hasBeenFertilized = cornstalk.hasBeenFertilized();
-        assertTrue(hasBeenFertilized);
+        boolean hasBeenFertilized = cornstalk.isFertilized();
+        Assert.assertTrue(hasBeenFertilized);
     }
 
     @Test

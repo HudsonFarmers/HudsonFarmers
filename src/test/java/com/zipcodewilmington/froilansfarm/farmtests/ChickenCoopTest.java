@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.farmtests;
 
-import com.zipcodewilmington.froilansfarm.farm.Animal.Chicken;
+import com.zipcodewilmington.froilansfarm.Animal.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.farm.ChickenCoop;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,9 +11,9 @@ public class ChickenCoopTest {
 
     @Test
     public void testInheritanceOfArrayList(){
-        // Given
+        // Give
         ChickenCoop cc = new ChickenCoop();
 
-        Assert.assertTrue(cc instanceof ArrayList<Chicken>);
+        Assert.assertTrue(cc instanceof ArrayList);
     }
 }
