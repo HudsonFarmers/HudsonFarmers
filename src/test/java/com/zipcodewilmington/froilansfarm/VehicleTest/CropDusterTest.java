@@ -4,10 +4,25 @@ import com.zipcodewilmington.froilansfarm.Animal.animals.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Animal.persons.Pilot;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Vehicle.*;
+import com.zipcodewilmington.froilansfarm.farm.Field;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class CropDusterTest {
+    @Test
+    public void testMakeNoise() {
+        String expected = "whatever sounds a crop-duster makes";
+        String actual = new CropDuster().makeNoise();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testOperateFalse() {
+        CropDuster cd = new CropDuster<>();
+        boolean status = cd.operate(new Field());
+        Assert.assertFalse(status);
+    }
+
     @Test
     public void testTractorConstructor() {
         CropDuster cropDuster = new CropDuster();
@@ -40,32 +55,5 @@ public class CropDusterTest {
         CropDuster cropDuster = new CropDuster();
 
         Assert.assertTrue(cropDuster instanceof AirCraft);
-    }
-
-    @Test
-    public void testFly() {
-        Pilot pilot = new Pilot();
-        CropDuster cropDuster = new CropDuster();
-        CropRow cropRow = new CropRow();
-//        cropRow.add(tomato);
-//
-//        pilot.mount(cropDuster);
-//        cropDuster.fly(cropRow);
-//
-//        Assert.assertTrue(cropRow[0].hasBeenFertilized);
-    }
-
-    @Test
-    public void testOperate() {
-//        Pilot pilot = new Pilot();
-//        CropDuster cropDuster = new CropDuster();
-//
-//        cropRow.add(tomato);
-//        pilot.mount(cropDuster);
-//        cropDuster.fly(cropRow);
-//
-//        tractor.operate(cropRow);
-//        String expected = "Chugga Chugga";
-//        Assert.assertTrue((crowRow.canBeHarvested() == true) && (expected == tractor.makeNoise()));
     }
 }

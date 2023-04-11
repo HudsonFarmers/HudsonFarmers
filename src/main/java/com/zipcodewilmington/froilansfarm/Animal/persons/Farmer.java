@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Animal.persons;
 
+import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Vehicle.FarmRides;
 import com.zipcodewilmington.froilansfarm.Vehicle.Rideable;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
@@ -15,12 +17,12 @@ public class Farmer<T extends FarmRides> extends Person implements Botanist, Rid
 
     @Override
     public CropRow plant(Crop crop, CropRow cropRow) {
-        return null;
-    }
-
-    @Override
-    public void eat(Edible food) {
-
+        // adding 5 new instance of crop into cropRow
+        for(int i = 0; i < 5; i++){
+            cropRow.add(crop instanceof CornStalk? new CornStalk()
+                    : new TomatoPlant());
+        }
+        return cropRow;
     }
 
     @Override
@@ -41,26 +43,3 @@ public class Farmer<T extends FarmRides> extends Person implements Botanist, Rid
         return false;
     }
 }
-
-//public class Farmer implements Rider<Tractor> {
-//
-//    @Override
-//    public boolean mount(Tractor tractor) {
-//        if (!tractor.isMounted()) {
-//            tractor.setMounted(true);
-//            return true;
-//        }
-//
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean dismount(Tractor tractor) {
-//        if (tractor.isMounted()) {
-//            tractor.setMounted(false);
-//            return true;
-//        }
-//
-//        return false;
-//    }
-//}

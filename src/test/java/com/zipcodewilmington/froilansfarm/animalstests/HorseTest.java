@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.Animal.animals.Animal;
 import com.zipcodewilmington.froilansfarm.Animal.persons.Farmer;
 import com.zipcodewilmington.froilansfarm.Vehicle.Rideable;
 import com.zipcodewilmington.froilansfarm.Animal.animals.Horse;
+import com.zipcodewilmington.froilansfarm.edible.Corn;
+import com.zipcodewilmington.froilansfarm.farm.Storage;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,7 +30,7 @@ public class HorseTest {
 
         Assert.assertEquals(actual,expected);
     }
-// Farmer needs to have the <Horse> or <Horse>
+    // Farmer needs to have the <Horse> or <Horse>
     @Test
     public void testRidingStatusMounted(){
         Horse horse =new Horse();
@@ -71,6 +73,18 @@ public class HorseTest {
         // check if horse been dismounted by farmer
         farmer.disMount(horse);
         Assert.assertFalse(horse.isMounted());
+    }
+
+    @Test
+    public void testEat(){
+        Storage.getCornStorage().clear();
+        Storage.getCornStorage().add(new Corn());
+        Integer expected = 0;
+        Horse horse= new Horse();
+
+        horse.eat(new Corn());
+        Integer actual = Storage.getCornStorage().size();
+        Assert.assertEquals(expected,actual);
     }
 
 }

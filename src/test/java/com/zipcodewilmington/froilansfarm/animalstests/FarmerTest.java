@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.animalstests;
 
 import com.zipcodewilmington.froilansfarm.Animal.animals.Animal;
 import com.zipcodewilmington.froilansfarm.Animal.animals.Eater;
+import com.zipcodewilmington.froilansfarm.Animal.animals.Horse;
 import com.zipcodewilmington.froilansfarm.Animal.animals.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Animal.persons.Botanist;
 import com.zipcodewilmington.froilansfarm.Animal.persons.Farmer;
@@ -17,6 +18,17 @@ public class FarmerTest {
  extends Person
 implements botanist, Rider<Tractor>
      */
+    @Test
+    public void testMakeNoise(){
+        String expected = "I'm a farmer!";
+        String actual = new Farmer().makeNoise();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testDismount(){
+        Assert.assertFalse(new Farmer().disMount(new Horse()));
+    }
     @Test
     public void testInstanceOfPerson(){
         Farmer farmer = new Farmer();

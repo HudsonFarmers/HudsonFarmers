@@ -14,14 +14,19 @@ public class Chicken<T extends Edible, E extends Edible> implements Animal<T>, P
         return "bak bak";
     }
 
-
     @Override
-    public void eat(Edible food) {
-        Storage.getCornStorage().remove(food);
+    public Egg yield() {
+        Egg egg = new Egg();
+        Storage.getEggStorage().add(egg);
+        return egg;
     }
 
     @Override
-    public Egg yield() {
-        return new Egg();
+    public boolean eat(Edible food) {
+        if(Storage.getCornStorage().size()>0){
+            Storage.getCornStorage().remove(0);
+            return true;
+        }
+        return false;
     }
 }

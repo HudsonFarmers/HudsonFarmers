@@ -15,7 +15,6 @@ public abstract class Crop<T extends Edible> implements Produce<T> {
         isHarvested = false;
     }
 
-
     public boolean isFertilized() {
         return isFertilized;
     }
@@ -28,13 +27,5 @@ public abstract class Crop<T extends Edible> implements Produce<T> {
         return isHarvested;
     }
 
-    public void setHarvested(boolean harvested) {
-        isHarvested = harvested;
-    }
-
-//    public boolean hasBeenFertilized() {
-//        return false;
-//    }
-
-    public abstract T yield();
+//    public abstract T yield();
 }
