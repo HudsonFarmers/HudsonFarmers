@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.farm;
 
 import java.util.ArrayList;
 
-public class git puFarm {
+public class puFarm {
     private static final Farm FARM = new Farm(); // Singleton variable of FARM
     private ArrayList<ChickenCoop> chickenCoops;
     private ArrayList<Stable> stables;
@@ -21,7 +21,7 @@ public class git puFarm {
     }
 
     // Nullary Constructor
-    private Farm(){
+    private class Farm(){
          this(new ArrayList<>(), new ArrayList<>(), new FarmHouse());
     }
 
