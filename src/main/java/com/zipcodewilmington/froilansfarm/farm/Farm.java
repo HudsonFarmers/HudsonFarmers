@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.farm;
 
 import java.util.ArrayList;
 
-public class Farm {
+public class git puFarm {
     private static final Farm FARM = new Farm(); // Singleton variable of FARM
     private ArrayList<ChickenCoop> chickenCoops;
     private ArrayList<Stable> stables;
