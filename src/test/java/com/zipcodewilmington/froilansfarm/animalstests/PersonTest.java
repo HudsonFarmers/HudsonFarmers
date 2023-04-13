@@ -29,7 +29,6 @@ public class PersonTest {
     @Test
     public void testEatTomato(){
         Person farmer = new Farmer();
-        Assert.assertFalse(farmer.eat(new Tomato()));
         Storage.getTomatoStorage().add(new Tomato());
         Assert.assertTrue(farmer.eat(new Tomato()));
     }

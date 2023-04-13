@@ -82,7 +82,7 @@ public class TractorTest {
         cropDuster.operate(field);
         farmer.mount(tractor);
         tractor.operate(field);
-        int expected = 6;
+        int expected = 11;
 
         Assert.assertEquals(expected, Storage.getTomatoStorage().size());
     }

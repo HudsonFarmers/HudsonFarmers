@@ -18,7 +18,7 @@ public abstract class Person implements Animal {
             return false;
         } else if(food instanceof Tomato){
             if(Storage.getTomatoStorage().size()>0){
-                Storage.getCornStorage().remove(0);
+                Storage.getTomatoStorage().remove(0);
                 return true;
             }
             return false;
