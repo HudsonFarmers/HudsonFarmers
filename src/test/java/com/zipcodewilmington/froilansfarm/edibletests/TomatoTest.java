@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.edible.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TomatoTest {
+public class git TomatoTest {
     @Test
     public void testInheritanceOfEdible(){
         Tomato tomato = new Tomato();
