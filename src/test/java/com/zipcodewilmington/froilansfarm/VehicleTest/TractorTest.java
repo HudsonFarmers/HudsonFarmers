@@ -70,6 +70,7 @@ public class TractorTest {
 
         Pilot pilot = new Pilot();
         CropDuster cropDuster = new CropDuster();
+        Storage.getTomatoStorage().clear();
 
         CropRow cropRow = new CropRow();
         TomatoPlant tomatoPlant = new TomatoPlant();
